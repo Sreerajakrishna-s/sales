@@ -1,0 +1,36 @@
+<div class="whole">
+  <div class="l">
+    <h1 class="text-light" style="font-size: 40px;">Get Your Sales Forecast Today</h1>
+  
+    <p style="font-size: 25px;">Sales forecasting is both an art and a science. It requires intuition and data analysis to make accurate predictions
+    </p><br>
+    
+<br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+        integrity="sha256-qM7QTJSlvtPSxVRjVWNM2OfTAz/3k5ovHOKmKXuYMO4=" crossorigin="anonymous"></script>
+
+
+<h2>Upload CSV File and Select Time Period</h2>
+<br>
+
+<form (ngSubmit)="submitForm()" #myForm="ngForm"  enctype="multipart/form-data">
+  <div>
+    <label for="csvFile">CSV File:</label>
+    <input type="file" id="csvFile" name="csvFile" (change)="onFileSelected($event)" accept=".csv" required>
+  </div>
+<br>
+<br>
+  <div>
+    <label for="timePeriod">Time Period:</label>
+    <select id="timePeriod" name="timePeriod" [(ngModel)]="TimePeriod">
+      <option value="3">3 Months</option>
+      <option value="6">6 Months</option>
+      <option value="12">1 Year</option>
+    </select>
+  </div>
+  <br>
+
+  <button type="submit" [disabled]="!myForm.form.valid">Submit</button>
+</form>
+</div>
+</div>

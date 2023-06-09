@@ -1,0 +1,43 @@
+
+<div class="container-fluid">
+    <div class="row ">
+        <div class="column">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form class="register-form" action="" #f="ngForm" novalidate (ngSubmit)="f.form.valid&&onSubmit()">
+                        <div class="field">
+                            <h4 class="text-dark text-muted">Register</h4>
+                        </div>
+                        <div class="field">
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input type="text" class="form-control" name="email" placeholder="Email" id="" [(ngModel)]="formdata.email"
+                            #email="ngModel" required>
+                        <span class="text-danger" *ngIf="this.submit&&email.errors?.['required']">
+                            Email is required.
+                        </span>
+                        </div>
+                        <div class="field">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input class="form-control" type="password" name="password" placeholder="Password" id=""
+                            [(ngModel)]="formdata.password" #password="ngModel" required minlength="8">
+                        <span class="text-danger" *ngIf="this.submit&&password.errors?.['required']">
+                            Password is required.
+                        </span>
+                        <span class="text-danger" *ngIf="this.submit&&password.errors?.['minlength']">
+                            Minimum length should be 8 characters
+                        </span>
+                        </div>
+                        <button type="button" class="btn btn-info" (click)=" onSubmit()">Register</button>
+                        <div class="row">
+                            <div class="query">
+                               <p>Already have an account?<a routerLink="/login">Login</a></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

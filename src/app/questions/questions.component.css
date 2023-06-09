@@ -1,0 +1,35 @@
+.whole{
+    background-color: #080000;
+  }
+  body{
+    background-color: #1e1f26;
+    font-family:'Josefin Sans',sans-serif;
+  }
+  .container{
+    max-width: 980px;
+    margin-inline: auto;
+    padding: 52.5px 10px;
+    
+  }
+  .title{
+    font-size: 24px;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+  }
+  .faqs{
+    padding: 7px 21px;
+    margin-bottom: 24px;
+    border: 1px solid #777e91;
+    border-radius: 7px;
+  }
+  .label{
+    padding-block: 7px;
+    color: #eaedf0;
+    cursor: pointer;
+  }
+  .answer{
+    color: #777e91;
+    padding-top: 5px;
+    padding-bottom: 7px;
+  }
+  
